@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+{% block stylesheet %}
+<link rel="stylesheet" href="../static/css/styles_main.css">
+{% endblock %}
+<div class="home row">
+{% for movie in movies %}
+
+<div class="card shadow-sm col-lg-4 col-sm-6 home-cards">
+
+    <div>
+        <img src="{{movie['img_url']}}" width="100%" height="100%">
+    </div>
+    <div class="card-body">
+        <p>
+        <h3>{{movie['title']}} {{movie['year']}}</h3>Rating:{{movie['rating']}}</p>
+        <p><b>"{{movie['review']}}"</b></p>
+        <p class="card-text">{{movie['description']}}</p>
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                    <a href="/update_movie/{{movie['id']}}">Update</a>
+                </button>
+                
+                <button type="button" class="btn btn-sm btn-outline-secondary">
+                    <a href="/delete_movie/{{movie['id']}}">DELETE</a>
+                </button>
+                
+            </div>
+            <small class="text-body-secondary">{{movie['time']}}</small>
+        </div>
+    </div>
+</div>
+{% endfor %}
+<div class="text-center mt-3">
+    <a href="{{ url_for('add') }}">
+        <button type="button" class="btn btn-outline-primary">Add Movie</button>
+    </a>
+</div>
+
+{% endblock %}
+</div>

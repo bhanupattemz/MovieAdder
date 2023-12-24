@@ -1,0 +1,40 @@
+/* signup page */
+.signup-card{
+    margin-left: 35%;
+    margin-right: 35%;
+    text-align: center;
+    align-items: center;
+}
+.signup-card input,button {
+    width: 80%;
+    margin-bottom: 5%;
+}
+.terms{
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+    text-align: center;
+    font-size: small;
+}
+/* navbar */
+.navbar {
+  background-image: url("../images/background.jpeg");
+}
+.navbar p{
+    color: white;
+    margin-bottom: 3%;
+}
+
+
+/* css for home page */
+.home{
+    padding:0% 3%;
+}
+.home-cards{
+    margin: 1% 0% 1% 0%;
+}
+
+/* css for about page */
+.about{
+    margin: 0% 3%;
+}

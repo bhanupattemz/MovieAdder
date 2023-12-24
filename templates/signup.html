@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block stylesheet %}
+<link rel="stylesheet" href="../static/css/styles_main.css">
+{% endblock %}
+{% block content %}
+<div class="card mb-4 rounded-3 shadow-sm signup-card" style="background: transparent;">
+    <div class="card-header py-3">
+        <h4 class="brown-text">Create a new account</h4>
+    </div>
+    <div class="card-body">
+        <form action="{{url_for('signup')}}" method="post">
+            <input type="email"  name="email" placeholder="Email" required="required">
+            <input type="password"  name="password" placeholder="Password" required="required">
+            <input type="text"  name="name" placeholder="Your Name" required="required">
+            <div class="">
+                <p style="text-align: center;">By signing up, you agree to our Terms , Privacy Policy and Cookies Policy .</p>
+            </div>
+            <button type="submit" class="btn btn-outline-primary login-button">Signup</button>
+        </form> 
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,50 @@
+body{
+    background-image: url(../images/background.jpeg);
+    padding: 2% 5%;
+    background-size: 100% 100%;
+}  
+p{
+    color: white;
+}
+h1,h6{
+    font-family: 'Belanosima', sans-serif;
+}
+
+.login{
+    background-image: url(../images/background.jpeg);
+    align-content: center;
+    text-align: center;
+    padding:20px;
+} 
+.container-1{
+    padding: 5% 5%;
+}
+
+.login-button{
+    margin-top: 6%;
+    width: 100%;
+}
+.brown-text{
+    color: #ce5831;
+}
+
+button{
+    background: #ce5831;
+}
+.social{
+    color: white;
+}
+.font-type{
+    font-family: 'Caprasimo', cursive;
+}
+.sign{
+    width: 100%;   
+    background: transparent;
+    color: white;
+    border: none;
+    border-bottom: 3px solid #ce5831;
+    margin-top: 6%;
+    
+}
+
+

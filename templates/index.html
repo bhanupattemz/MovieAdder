@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block stylesheet %} 
+<link rel="stylesheet" href="static/css/styles.css"> 
+{% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-12 row container-1">
+        <div class="details col-xs-12 col-sm-7 col-lg-9">
+            <h1 class="brown-text">Movie Adder</h1>
+            <h3 style="color: whitesmoke;">Explore Your Cinematic Universe!</h3>
+            <p>
+                Discover, rate, and review your favorite movies in one place.<br> Build your cinematic collection and share your passion  with <br> a vibrant community of film enthusiasts.
+            </p>
+            <p>
+                If you don't have account,signup for Free 
+            </p>
+            <a href="{{url_for('signup')}}"><button type="button" class="btn btn-primary">SignUp for free</button></a>
+
+        </div>
+        <div class="login col-xs-12 col-sm-5 col-lg-3 card">
+            <h6 class=" brown-text"><b>Login Here</b></h6>
+            {% if not password %}
+            <p style="color: red;">Sorry, your password or email was incorrect. Please check your details.</p>
+            {% endif %}
+            <form action="{{url_for('signin')}}" method="post">
+                <input type="email" name="email" class="sign" placeholder="name@example.com" required="required">
+    
+                <input type="password" name="password" class="sign" placeholder="Password" required="required">
+    
+                <button type="submit" class="btn btn-outline-primary login-button">Login</button>
+            </form>
+            <br>
+            <p>
+                Don't have account an account?<br> <a href="{{url_for('signup')}}" class="brown-text">Sign Up</a> here<br><br>
+                Log in here
+            </p>
+            <div class="row">
+    
+                <p class="col-3"><a href="#" class="social">
+                        <i class="fa-brands fa-square-facebook fa-2xl"></i>
+                    </a></p>
+                <p class="col-3"><a href="#" class="social">
+                        <i class="fa-brands fa-square-instagram fa-2xl"></i>
+                    </a></p>
+                <p class="col-3"><a href="#" class="social">
+                        <i class="fa-brands fa-x-twitter fa-2xl"></i>
+                    </a></p>
+                <p class="col-3"><a href="#" class="social">
+                        <i class="fa-brands fa-google fa-2xl"></i>
+                    </a></p>
+    
+            </div>
+    
+        </div>
+    
+    </div>
+</div>
+{% endblock %}

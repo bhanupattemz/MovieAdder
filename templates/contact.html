@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<div style="margin: 0% 3%;">
+    <h1>Contact details</h1>
+    <ul>
+        <li>
+            Gmail-<i>bhanu280104@gmail.com</i>
+        </li>
+        <li>
+            Phone-<i>8555860089</i>
+        </li>
+        <li>
+            Facebook ID-<i>bhanu prakash pattem</i>
+        </li>
+        <li>Instagram-<i>bhanupattemz</a></i>
+        </li>
+    </ul>
+    <hr>
+    <form action="mailto:bhanu253253@gmail.com" method="post" enctype="text/plain">
+        <label for="">Your Name:</label>
+        <input type="text" name="Name" value=""><br><br>
+        <label for="">your mail:</label>
+        <input type="text" name="Gmail" value=""><br><br>
+        <label for="">Your message:</label><br>
+        <textarea name="your message" rows="5" cols="50"></textarea><br>
+        <button type="submit" class="btn btn-primary">submit</button>
+        <br>
+    </form>
+</div>
+
+
+{% endblock %}
